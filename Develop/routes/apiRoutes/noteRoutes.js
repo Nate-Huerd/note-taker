@@ -4,7 +4,7 @@ const { createNewNote} = require('../../lib/notes');
 // refer to notes from db.json file
 const { notes } = require('../../db/db.json');
 
-// create GET
+// create GET route
 router.get('/notes', (req, res) => {
     // results from user input is "notes"
     let results = notes;
@@ -12,7 +12,7 @@ router.get('/notes', (req, res) => {
     res.json(results);
 });
 
-// create POST
+// create POST route
 router.post('/notes', (req, res) => {
     // stringify the "notes" request body
     req.body.id = notes.length.toString();
