@@ -12,8 +12,11 @@ function createNewNote(body, notes) {
     fs.writeFileSync(path.join(__dirname, '../db/db.json'),JSON.stringify({notes}, null, 2)
     )
     // return the note created
-    return notes;
+    return note;
 };
 
-// export createNewNote
-module.exports = {createNewNote};
+// export createNewNote (use brackets per https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
+module.exports = { createNewNote };
+
+
+// figure out heroku info
