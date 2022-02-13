@@ -1,5 +1,6 @@
 // refer to module 11 for beginning a server.js file
 const express = require('express');
+const fs = require('fs');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -7,7 +8,7 @@ const app = express();
 const htmlRoutes = require('./routes/htmlRoutes');
 const apiRoutes = require('./routes/apiRoutes');
 
-// express app.use statements (refer to documentation)
+// Middleware express app.use statements (refer to documentation)
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(express.json());
