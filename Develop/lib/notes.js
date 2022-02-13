@@ -19,4 +19,5 @@ function createNewNote(body, notes) {
 module.exports = { createNewNote };
 
 
-// figure out heroku info
+
+// error "cannot GET /notes"
