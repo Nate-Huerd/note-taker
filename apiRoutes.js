@@ -9,3 +9,11 @@ router.get('/notes', (req, res) => {
         // error handler
         .catch((err) => res.status(500).json(err));
 });
+
+router.post('/notes', (req, res) => {
+    store
+    // post/add note, then convert note to JSON
+        .addNote(req.body).then((note) => res.json(note))
+        // error handler
+        .catch((err) => res.status(500).json(err));
+});
