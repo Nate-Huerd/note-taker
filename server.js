@@ -5,8 +5,8 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 // declare html and api Routes paths
-const htmlRoutes = require('./routes/htmlRoutes');
-const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('../../routes/htmlRoutes');
+const apiRoutes = require('../../routes/apiRoutes');
 
 // Middleware express app.use statements (refer to documentation)
 app.use(express.urlencoded({ extended: true }));
